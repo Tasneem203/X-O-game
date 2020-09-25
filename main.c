@@ -15,12 +15,21 @@ int main()
 
      do{
         print();
-        player = (player%2) ? 1 : 2;
+
+       if(player%2) != 0{
+           player=1;}
+        else{
+            player= 2;
+     }
         printf("player %d choose a number to play: ", player);
         scanf(" %d", &userinput);
-
-        playnow = (player == 1 ? 'X' : 'O');
-
+         
+        if (player == 1) != 0{
+            player ='X';
+        }
+         else{
+             player='O'
+         }
 
         if (userinput == 1 && arr[0]== '1')
         arr[0] = playnow;
