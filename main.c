@@ -16,7 +16,7 @@ int main()
      do{
         print();
 
-       if(player%2) != 0{
+       if(player%2){
            player=1;}
         else{
             player= 2;
@@ -24,11 +24,11 @@ int main()
         printf("player %d choose a number to play: ", player);
         scanf(" %d", &userinput);
          
-        if (player == 1) != 0{
-            player ='X';
+        if (player == 1){
+            playnow = 'X';
         }
          else{
-             player='O'
+             playnow = 'O';
          }
 
         if (userinput == 1 && arr[0]== '1')
