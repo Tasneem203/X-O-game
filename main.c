@@ -44,9 +44,9 @@ player++;
 while(i == -1);
 print();
 if (i == 1)
-printf("PLAYER %d WIN" , --player);
+printf("PLAYER %d WIN\a" , --player);
 else
-printf("GAME OVER fOR BOTH");
+printf("GAME OVER fOR BOTH\a");
 
 
 return 0;
