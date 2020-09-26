@@ -16,37 +16,40 @@ char playnow;
 int main()
 {
 
-     do{
-        print();
-       if(player%2){
-           player=1;}
-        else{
-            player= 2;
-     }
-        printf("player %d choose a number to play: ", player);
-        scanf(" %d", &userinput);
-                if (player == 1){
-            playnow ='X';
-        }
-         else{
-             playnow = 'O';
-         }
+do{
+print();
+if(player%2){
+player=1;
+}
+else{
+player= 2;
+}
+printf("player %d choose a number to play: ", player);
+scanf(" %d", &userinput);
+if (userinput < 1 || userinput > 9)
+printf("\n\n WRONG choice !!!");
 
-        insert();
+if (player == 1)
+playnow ='X';
 
-        i=iswinning();
-        player++;
-        }
-        while(i == -1);
-        print();
-        if (i == 1)
-        printf("PLAYER %d WIN" , --player);
-        else
-        printf("GAME OVER fOR BOTH");
+else{
+playnow = 'O';
+}
+
+insert();
+
+i=iswinning();
+player++;
+}
+while(i == -1);
+print();
+if (i == 1)
+printf("PLAYER %d WIN" , --player);
+else
+printf("GAME OVER fOR BOTH");
 
 
-        //getch();
-        return 0;
+return 0;
 }
 
 
@@ -88,7 +91,7 @@ return -1;
 
 void print()
 {
-system("cls");
+//system("cls");
 printf("\n\n\t TIC TAC TEO\n\n");
 printf("Player 1 (X) - Player 2 (O)\n\n\n");
 
@@ -133,6 +136,4 @@ arr[2][2] = playnow;
 
 else
 player--;
-//getch();
 }
-
